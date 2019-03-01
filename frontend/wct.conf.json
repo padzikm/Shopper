@@ -1,0 +1,17 @@
+{
+  "suites": ["test/unit"],
+  "plugins": {
+    "local": {
+      "browserOptions": {
+        "chrome": [
+          "headless",
+          "disable-gpu",
+          "no-sandbox"
+        ]
+      }
+    },
+    "xunit-reporter": {
+      "output": "testResults.xml"
+    }
+  }
+}

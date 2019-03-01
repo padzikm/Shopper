@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assemblies>
+  <assembly name="WCT Unit tests [chrome.72]" environment="chrome.72" test-framework="web-component-tester" run-date="2019-02-26" run-time="23:23:42">
+    <collection/>
+  </assembly>
+  <assembly name="WCT Unit tests [firefox.57]" environment="firefox.57" test-framework="web-component-tester" run-date="2019-02-26" run-time="23:23:43" total="16" passed="14" failed="2" skipped="0">
+    <collection passed="14" failed="2" skipped="0">
+      <test name="starts empty" method="counter-element tests.starts empty" type="test/unit/counter-element.html" result="Pass" time="0"/>
+      <test name="clicking on plus increments" method="counter-element tests.clicking on plus increments" type="test/unit/counter-element.html" result="Fail" time="4">
+        <failure>
+          <message>
+            <![CDATA[expected 1 to equal '2']]>
+          </message>
+          <stack-trace>
+            <![CDATA[expected 1 to equal '2'
+  Context.<anonymous> at counter-element.html:46]]>
+          </stack-trace>
+        </failure>
+      </test>
+      <test name="clicking on minus decrements" method="counter-element tests.clicking on minus decrements" type="test/unit/counter-element.html" result="Pass" time="0"/>
+      <test name="a11y" method="counter-element tests.a11y" type="test/unit/counter-element.html" result="Pass" time="49"/>
+      <test name="starts empty" method="counter-element tests.starts empty" type="test/unit/counter-element.html" result="Pass" time="1"/>
+      <test name="clicking on plus increments" method="counter-element tests.clicking on plus increments" type="test/unit/counter-element.html" result="Fail" time="2">
+        <failure>
+          <message>
+            <![CDATA[expected 1 to equal '2']]>
+          </message>
+          <stack-trace>
+            <![CDATA[expected 1 to equal '2'
+                            AssertionError at /components/pwa-starter-kit/node_modules/chai/chai.js:9077
+  [3]</module.exports/Assertion.prototype.assert at /components/pwa-starter-kit/node_modules/chai/chai.js:293
+          [6]</module.exports/assert.equal at /components/pwa-starter-kit/node_modules/chai/chai.js:4006
+                                 <unknown> at /components/pwa-starter-kit/test/unit/counter-element.html:83]]>
+          </stack-trace>
+        </failure>
+      </test>
+      <test name="clicking on minus decrements" method="counter-element tests.clicking on minus decrements" type="test/unit/counter-element.html" result="Pass" time="1"/>
+      <test name="a11y" method="counter-element tests.a11y" type="test/unit/counter-element.html" result="Pass" time="66"/>
+      <test name="starts empty" method="counter-element tests.starts empty" type="test/unit/counter-element.html" result="Pass" time="0"/>
+      <test name="clicking on plus increments" method="counter-element tests.clicking on plus increments" type="test/unit/counter-element.html" result="Fail" time="0">
+        <failure>
+          <message>
+            <![CDATA[expected 1 to equal '2']]>
+          </message>
+          <stack-trace>
+            <![CDATA[expected 1 to equal '2'
+  Context.<anonymous> at counter-element.html:46]]>
+          </stack-trace>
+        </failure>
+      </test>
+      <test name="clicking on minus decrements" method="counter-element tests.clicking on minus decrements" type="test/unit/counter-element.html" result="Pass" time="1"/>
+      <test name="a11y" method="counter-element tests.a11y" type="test/unit/counter-element.html" result="Pass" time="23"/>
+      <test name="starts empty" method="counter-element tests.starts empty" type="test/unit/counter-element.html" result="Pass" time="0"/>
+      <test name="clicking on plus increments" method="counter-element tests.clicking on plus increments" type="test/unit/counter-element.html" result="Fail" time="3">
+        <failure>
+          <message>
+            <![CDATA[expected 1 to equal '2']]>
+          </message>
+          <stack-trace>
+            <![CDATA[expected 1 to equal '2'
+                            AssertionError at /components/pwa-starter-kit/node_modules/chai/chai.js:9077
+  [3]</module.exports/Assertion.prototype.assert at /components/pwa-starter-kit/node_modules/chai/chai.js:293
+          [6]</module.exports/assert.equal at /components/pwa-starter-kit/node_modules/chai/chai.js:4006
+                                 <unknown> at /components/pwa-starter-kit/test/unit/counter-element.html:83]]>
+          </stack-trace>
+        </failure>
+      </test>
+      <test name="clicking on minus decrements" method="counter-element tests.clicking on minus decrements" type="test/unit/counter-element.html" result="Pass" time="1"/>
+      <test name="a11y" method="counter-element tests.a11y" type="test/unit/counter-element.html" result="Pass" time="65"/>
+      <test name="my-view1" method="views a11y tests.my-view1" type="test/unit/views-a11y.html" result="Pass" time="9"/>
+      <test name="my-view2" method="views a11y tests.my-view2" type="test/unit/views-a11y.html" result="Pass" time="10"/>
+      <test name="my-view3" method="views a11y tests.my-view3" type="test/unit/views-a11y.html" result="Pass" time="11"/>
+      <test name="my-view404" method="views a11y tests.my-view404" type="test/unit/views-a11y.html" result="Pass" time="12"/>
+      <test name="my-view1" method="views a11y tests.my-view1" type="test/unit/views-a11y.html" result="Pass" time="42"/>
+      <test name="my-view2" method="views a11y tests.my-view2" type="test/unit/views-a11y.html" result="Pass" time="29"/>
+      <test name="my-view3" method="views a11y tests.my-view3" type="test/unit/views-a11y.html" result="Pass" time="18"/>
+      <test name="my-view404" method="views a11y tests.my-view404" type="test/unit/views-a11y.html" result="Pass" time="11"/>
+      <test name="my-view1" method="views a11y tests.my-view1" type="test/unit/views-a11y.html" result="Pass" time="15"/>
+      <test name="my-view2" method="views a11y tests.my-view2" type="test/unit/views-a11y.html" result="Pass" time="16"/>
+      <test name="my-view3" method="views a11y tests.my-view3" type="test/unit/views-a11y.html" result="Pass" time="13"/>
+      <test name="my-view404" method="views a11y tests.my-view404" type="test/unit/views-a11y.html" result="Pass" time="6"/>
+      <test name="my-view1" method="views a11y tests.my-view1" type="test/unit/views-a11y.html" result="Pass" time="38"/>
+      <test name="my-view2" method="views a11y tests.my-view2" type="test/unit/views-a11y.html" result="Pass" time="20"/>
+      <test name="my-view3" method="views a11y tests.my-view3" type="test/unit/views-a11y.html" result="Pass" time="18"/>
+      <test name="my-view404" method="views a11y tests.my-view404" type="test/unit/views-a11y.html" result="Pass" time="11"/>
+    </collection>
+    <errors>
+      <error>
+        <![CDATA[2 failed tests]]>
+      </error>
+    </errors>
+    <errors>
+      <error>
+        <![CDATA[2 failed tests]]>
+      </error>
+    </errors>
+  </assembly>
+</assemblies>

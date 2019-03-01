@@ -1,0 +1,16 @@
+{
+  "name": "apigateway",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js",
+    "watch": "nodemon ./index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^2.3.1",
+    "graphql": "^14.1.1"
+  }
+}
