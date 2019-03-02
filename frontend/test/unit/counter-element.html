@@ -59,7 +59,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         test('clicking on minus decrements', function() {
           assert.equal(el.clicks, '0');
-          assert.equal(el.value, '1');
+          assert.equal(el.value, '0');
 
           const buttons = el.shadowRoot.querySelectorAll('button');
           buttons[1].click();
