@@ -9,6 +9,6 @@ export class ProductList extends LitElement{
             html`<ul>
             ${this.products.map(p => html`<li>${p.name}</li>`)}
             </ul>`
-            : html`nic nie ma`}`;
+            : html`nic nie ma!`}`;
     }
 }
