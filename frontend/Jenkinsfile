@@ -1,0 +1,7 @@
+node('docker'){
+    def projectName = "frontend"
+    def testFilePath = "/app/testResults.xml"
+    
+    shopper.cloneRepo()
+    shopper.test(projectName, testFilePath)
+}
