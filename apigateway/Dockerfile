@@ -1,14 +1,10 @@
 FROM node:11.10
 
-LABEL maintainer="shopper"
-
 RUN npm install -g nodemon
 
-VOLUME [ "/data" ]
+VOLUME [ "/app" ]
 
-WORKDIR /data
-
-COPY package.json .
+WORKDIR /app
 
 EXPOSE 4000
 
