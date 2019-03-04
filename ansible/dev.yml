@@ -1,8 +1,0 @@
-- hosts: localhost
-  connection: local
-  remote_user: vagrant
-  become: true
-  roles:
-    - powershell
-    - docker
-    

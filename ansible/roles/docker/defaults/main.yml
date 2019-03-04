@@ -1,2 +1,0 @@
-docker_cfg_src: daemon.json
-docker_cfg_dest: /etc/docker/daemon.json
