@@ -1,3 +1,15 @@
+FROM node:11.10 as dev
+
+WORKDIR /app
+
+VOLUME ["/app"]
+
+EXPOSE 8081
+
+CMD npm install && npm run start
+
+
+
 FROM node:11.10 as test
 
 WORKDIR /app
@@ -31,7 +43,7 @@ CMD  (Xvfb :0 -ac -screen 0 1920x1080x24 &) && npm run test:unit
 
 
 
-FROM node:11.10
+FROM node:11.10 as prod
 
 WORKDIR /app
 

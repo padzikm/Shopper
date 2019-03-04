@@ -55,5 +55,5 @@ gulp.task('serve', () => {
   };
   spawn('tsc', ['--watch --outDir dist'], spawnOptions);
   spawn('rollup', ['-c -w'], spawnOptions);
-  spawn('polymer', ['serve -p 8081'], spawnOptions);
+  spawn('polymer', ['serve -p 8081 --hostname 0.0.0.0'], spawnOptions);
 });

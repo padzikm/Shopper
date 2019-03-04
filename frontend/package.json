@@ -13,7 +13,7 @@
     "build:static": "tsc && polymer build",
     "build:app": "tsc --outDir dist && rollup -c",
     "serve": "prpl-server --root server/build",
-    "serve:local": "polymer serve --port 8081",
+    "serve:local": "polymer serve --port 8081 --hostname 0.0.0.0",
     "serve:static": "polymer serve --port 5000 build/es5-bundled",
     "test": "npm run test:unit && npm run test:integration",
     "test:integration": "tsc && mocha test/integration --timeout=10000",

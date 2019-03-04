@@ -8,7 +8,7 @@ import { html, LitElement, customElement, property, css } from 'lit-element';
 import './product-list';
 import ApolloClient, { gql } from 'apollo-boost';
 const client = new ApolloClient({
-    uri: 'http://localhost:4000/'
+    uri: 'http://10.100.199.200:4000/'
 });
 const productListQuery = gql `{
     products {
