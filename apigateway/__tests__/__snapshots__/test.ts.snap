@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`query products test 1`] = `
+Object {
+  "products": Array [
+    Object {
+      "name": "raz",
+    },
+    Object {
+      "name": "dwaa",
+    },
+    Object {
+      "name": "trzyy",
+    },
+  ],
+}
+`;
+
+exports[`query schema test 1`] = `
+Object {
+  "__schema": Object {
+    "types": Array [
+      Object {
+        "name": "Query",
+      },
+      Object {
+        "name": "Products",
+      },
+      Object {
+        "name": "String",
+      },
+      Object {
+        "name": "__Schema",
+      },
+      Object {
+        "name": "__Type",
+      },
+      Object {
+        "name": "__TypeKind",
+      },
+      Object {
+        "name": "Boolean",
+      },
+      Object {
+        "name": "__Field",
+      },
+      Object {
+        "name": "__InputValue",
+      },
+      Object {
+        "name": "__EnumValue",
+      },
+      Object {
+        "name": "__Directive",
+      },
+      Object {
+        "name": "__DirectiveLocation",
+      },
+      Object {
+        "name": "CacheControlScope",
+      },
+      Object {
+        "name": "Upload",
+      },
+      Object {
+        "name": "Int",
+      },
+    ],
+  },
+}
+`;
