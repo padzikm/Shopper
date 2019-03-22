@@ -1,11 +1,12 @@
-schema: src/**/*.graphql
+schema: src/**/schema.graphql
+documents: src/**/client.graphql
 overwrite: true
 generates:
   ./typings/types.server.d.ts:
     plugins:
-      - typescript-common
-      - typescript-server
+      - typescript
+      - typescript-resolvers
   ./typings/types.client.d.ts:
     plugins:
-      - typescript-common
-      - typescript-client
+      - typescript
+      - typescript-operations

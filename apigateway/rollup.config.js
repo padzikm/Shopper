@@ -11,9 +11,9 @@ export default {
       format: 'cjs'
     },
     plugins: [
+        graphql(),
         resolve(),
         commonjs(),
-        graphql(),
         typescript({
             tsconfigOverride: {
                 compilerOptions: {

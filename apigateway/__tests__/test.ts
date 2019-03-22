@@ -38,3 +38,17 @@ test('query products test', async () => {
     
     expect(res.data).toMatchSnapshot()
 });
+
+test('query products desc test', async () => {
+    const { query } = createTestClient(server);
+
+    const queryGql = gql`query {
+        products {
+            desc
+        }
+    }`
+
+    let res = await query({query: queryGql})
+    
+    expect(res.data).toMatchSnapshot()
+});

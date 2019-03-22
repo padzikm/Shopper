@@ -1,5 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`query products desc test 1`] = `
+Object {
+  "products": Array [
+    Object {
+      "desc": "nie ma opisu",
+    },
+    Object {
+      "desc": "nie ma opisu",
+    },
+    Object {
+      "desc": "nie ma opisu",
+    },
+  ],
+}
+`;
+
 exports[`query products test 1`] = `
 Object {
   "products": Array [
@@ -24,10 +40,16 @@ Object {
         "name": "Query",
       },
       Object {
-        "name": "Products",
+        "name": "Product",
       },
       Object {
         "name": "String",
+      },
+      Object {
+        "name": "LengthUnit",
+      },
+      Object {
+        "name": "Mutation",
       },
       Object {
         "name": "__Schema",
@@ -55,15 +77,6 @@ Object {
       },
       Object {
         "name": "__DirectiveLocation",
-      },
-      Object {
-        "name": "CacheControlScope",
-      },
-      Object {
-        "name": "Upload",
-      },
-      Object {
-        "name": "Int",
       },
     ],
   },

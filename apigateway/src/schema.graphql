@@ -1,8 +1,17 @@
-
 type Product {
   name: String!
+  desc(unit: LengthUnit): String
 }
 
 type Query {
   products: [Product!]!
+}
+
+enum LengthUnit{
+  METER
+  CENT
+}
+
+type Mutation{
+  crProduct(unit: LengthUnit): Product
 }
