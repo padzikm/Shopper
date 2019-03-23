@@ -53,7 +53,7 @@ gulp.task('serve', () => {
     shell: true,
     stdio: 'inherit'
   };
-  spawn('tsc', ['--watch --outDir dist'], spawnOptions);
+  //spawn('tsc', ['--watch --outDir dist'], spawnOptions);
   spawn('rollup', ['-c -w'], spawnOptions);
   spawn('polymer', ['serve -p 8081 --hostname 0.0.0.0'], spawnOptions);
 });

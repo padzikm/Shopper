@@ -1,44 +1,46 @@
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
+const graphql = require('./plugins/rollup-plugin-graphql.cjs');
+import litcss from 'rollup-plugin-lit-css';
+import typescript from 'rollup-plugin-typescript2';
 
 export default {
   input: [
-    'dist/components/my-app.js',
-    'dist/components/my-view1.js',
-    'dist/components/my-view2.js',
-    'dist/components/my-view3.js',
-    'dist/components/my-view404.js',
-    'dist/components/shopper/shopper-view.js',
+    'src/components/my-app.ts',
+    'src/components/my-view1.ts',
+    'src/components/my-view2.ts',
+    'src/components/my-view3.ts',
+    'src/components/my-view404.ts',
+    'src/components/shopper/shopper-view.ts',
   ],
 
   output: [{
     dir: 'build/modern',
-    format: 'es',
-    sourcemap: true,
-  }, {
-    dir: 'build/nomodule',
-    format: 'system',
+    format: 'esm',
     sourcemap: true,
   }],
 
   plugins: [
-
+    graphql(),
+    litcss(),
     // REQUIRED to roll apollo-client up
-    resolve({
-      browser: true,
-      jsnext: true,
-      module: true,
-    }),
+    resolve(),//({
+      // browser: true,
+      // jsnext: true,
+      // module: true,
+    //}),
 
     commonjs({
-      namedExports: {
-        // Necessary to roll apollo-link-state up.
-        // until graphql-anywhere 5.0
-        //'graphql-anywhere/lib/async': ['graphql'],
-        // Needed to roll up apollo-cache-persist
-        'apollo-cache-persist': ['persistCache']
-      }
-    }),
-
+      extensions: ['.js', '.graphql']
+    }),//({
+      // namedExports: {
+      //   // Necessary to roll apollo-link-state up.
+      //   // until graphql-anywhere 5.0
+      //   //'graphql-anywhere/lib/async': ['graphql'],
+      //   // Needed to roll up apollo-cache-persist
+      //   'apollo-cache-persist': ['persistCache']
+      // }
+    //}),
+    typescript(),
   ]
 }

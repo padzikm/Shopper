@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assemblies>
+  <assembly name="WCT Unit tests [chrome.72]" environment="chrome.72" test-framework="web-component-tester" run-date="2019-03-23" run-time="18:47:16">
+    <collection/>
+  </assembly>
+  <assembly name="WCT Unit tests [firefox.57]" environment="firefox.57" test-framework="web-component-tester" run-date="2019-03-23" run-time="18:47:20" total="0" passed="0" failed="0" skipped="0">
+    <collection passed="0" failed="0" skipped="0"/>
+    <errors>
+      <error>
+        <![CDATA[Timed out]]>
+      </error>
+    </errors>
+  </assembly>
+</assemblies>

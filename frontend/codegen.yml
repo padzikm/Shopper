@@ -1,0 +1,8 @@
+schema: ../apigateway/src/**/schema.graphql
+documents: src/**/client.graphql
+overwrite: true
+generates:
+  ./typings/types.client.d.ts:
+    plugins:
+      - typescript
+      - typescript-operations

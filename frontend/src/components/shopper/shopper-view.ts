@@ -1,32 +1,22 @@
-import { html, LitElement, customElement, property, css } from 'lit-element';
+import { html, LitElement, customElement, property } from 'lit-element';
 import './product-list';
-import ApolloClient, { gql } from 'apollo-boost';
+import ApolloClient from 'apollo-boost';
+import styles from './styles.css'
+import productListQuery from './client.graphql'
 
 const client = new ApolloClient({
-    uri: 'http://10.100.199.200:4000/'
+    uri: 'http://localhost:4000/'
 });
-
-const productListQuery = gql`{
-    products {
-        name
-    }
-}`;
 
 @customElement('shopper-view')
 export class ShopperView extends LitElement {
-    static styles = css`
-    p {
-        display: inline-block;
-        color: red;
-    }
-    `;
+    static styles = styles
 
     @property({type: Array}) products?: Array<{name: string}> = undefined;
 
     connectedCallback(){
         super.connectedCallback();
         client.query({query: productListQuery}).then((res: {data: any})  => {
-            console.log(res);
             this.products = res.data.products;
         })
     }

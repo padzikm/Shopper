@@ -7,8 +7,10 @@
   "license": "BSD-3-Clause",
   "repository": "Polymer/pwa-starter-kit",
   "scripts": {
+    "dev": "run-p -l \"code-gen --watch\" \"rollup --watch\" serve:local",
     "start": "gulp serve",
     "rollup": "rollup -c",
+    "code-gen": "gql-gen",
     "build": "tsc --outDir dist && polymer build --auto-base-path && gulp prpl-server",
     "build:static": "tsc && polymer build",
     "build:app": "tsc --outDir dist && rollup -c",
@@ -17,12 +19,12 @@
     "serve:static": "polymer serve --port 5000 build/es5-bundled",
     "test": "npm run test:unit && npm run test:integration",
     "test:integration": "tsc && mocha test/integration --timeout=10000",
-    "test:unit": "tsc && polymer test --module-resolution=node --npm",
+    "test:unit": "polymer test --module-resolution=node --npm",
     "test:sauce": "tsc && polymer test --module-resolution=node --npm -s 'windows 10/microsoftedge@17' -s 'macos 10.13/safari@11'",
     "test:regenerate_screenshots": "tsc && mocha test/integration/screenshots-baseline/regenerate.js --timeout=15000"
   },
   "dependencies": {
-    "@apollo-elements/lit-apollo": "0.0.7",
+    "@apollo-elements/lit-apollo": "^0.0.11",
     "@polymer/app-layout": "^3.0.0",
     "@polymer/polymer": "^3.1.0",
     "@webcomponents/webcomponentsjs": "^2.2.4",
@@ -36,6 +38,9 @@
     "reselect": "^4.0.0"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^1.0.3",
+    "@graphql-codegen/typescript": "^1.0.3",
+    "@graphql-codegen/typescript-operations": "^1.0.3",
     "@polymer/test-fixture": "^4.0.2",
     "@types/graphql": "^14.0.5",
     "axe-core": "^3.0.0",
@@ -45,6 +50,7 @@
     "gulp-rename": "^1.3.0",
     "gulp-replace": "^1.0.0",
     "mocha": "^5.2.0",
+    "npm-run-all": "^4.1.5",
     "pixelmatch": "^4.0.2",
     "polymer-cli": "^1.9.3",
     "polyserve": "^0.27.0",
@@ -52,7 +58,10 @@
     "puppeteer": "^1.5.0",
     "rollup": "^1.1.2",
     "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-graphql": "^0.1.0",
+    "rollup-plugin-lit-css": "^2.0.0",
     "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-typescript2": "^0.20.1",
     "typescript": "^3.1.3",
     "wct-mocha": "^1.0.0",
     "wct-xunit-reporter": "^1.0.2"
