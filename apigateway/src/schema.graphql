@@ -1,10 +1,12 @@
-type Product {
+type Product implements Testowy {
   name: String!
   desc(unit: LengthUnit): String
 }
 
 type Query {
   products: [Product!]!
+  unia: Unia
+  interfejs: Testowy
 }
 
 enum LengthUnit{
@@ -14,4 +16,25 @@ enum LengthUnit{
 
 type Mutation{
   crProduct(unit: LengthUnit): Product
+  createProduct(product: ProductInput!): Product!
 }
+
+input ProductInput {
+  name: String!
+}
+
+interface Testowy {
+  name: String!
+}
+
+type Jakistam implements Testowy {
+  name: String!
+  pole: Int
+}
+
+type Cokolwiek {
+  y: ID!
+  x: Float
+}
+
+union Unia = Product | Jakistam | Cokolwiek

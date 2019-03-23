@@ -8,6 +8,16 @@ export type Scalars = {
   Float: number;
 };
 
+export type Cokolwiek = {
+  y: Scalars["ID"];
+  x?: Maybe<Scalars["Float"]>;
+};
+
+export type Jakistam = Testowy & {
+  name: Scalars["String"];
+  pole?: Maybe<Scalars["Int"]>;
+};
+
 export enum LengthUnit {
   Meter = "METER",
   Cent = "CENT"
@@ -15,13 +25,18 @@ export enum LengthUnit {
 
 export type Mutation = {
   crProduct?: Maybe<Product>;
+  createProduct: Product;
 };
 
 export type MutationCrProductArgs = {
   unit?: Maybe<LengthUnit>;
 };
 
-export type Product = {
+export type MutationCreateProductArgs = {
+  product: ProductInput;
+};
+
+export type Product = Testowy & {
   name: Scalars["String"];
   desc?: Maybe<Scalars["String"]>;
 };
@@ -30,9 +45,21 @@ export type ProductDescArgs = {
   unit?: Maybe<LengthUnit>;
 };
 
+export type ProductInput = {
+  name: Scalars["String"];
+};
+
 export type Query = {
   products: Array<Product>;
+  unia?: Maybe<Unia>;
+  interfejs?: Maybe<Testowy>;
 };
+
+export type Testowy = {
+  name: Scalars["String"];
+};
+
+export type Unia = Product | Jakistam | Cokolwiek;
 
 import { GraphQLResolveInfo } from "graphql";
 
@@ -110,12 +137,28 @@ export type DirectiveResolverFn<
   info: GraphQLResolveInfo
 ) => TResult | Promise<TResult>;
 
+export type CokolwiekResolvers<Context = any, ParentType = Cokolwiek> = {
+  y?: Resolver<Scalars["ID"], ParentType, Context>;
+  x?: Resolver<Maybe<Scalars["Float"]>, ParentType, Context>;
+};
+
+export type JakistamResolvers<Context = any, ParentType = Jakistam> = {
+  name?: Resolver<Scalars["String"], ParentType, Context>;
+  pole?: Resolver<Maybe<Scalars["Int"]>, ParentType, Context>;
+};
+
 export type MutationResolvers<Context = any, ParentType = Mutation> = {
   crProduct?: Resolver<
     Maybe<Product>,
     ParentType,
     Context,
     MutationCrProductArgs
+  >;
+  createProduct?: Resolver<
+    Product,
+    ParentType,
+    Context,
+    MutationCreateProductArgs
   >;
 };
 
@@ -131,10 +174,29 @@ export type ProductResolvers<Context = any, ParentType = Product> = {
 
 export type QueryResolvers<Context = any, ParentType = Query> = {
   products?: Resolver<ArrayOrIterable<Product>, ParentType, Context>;
+  unia?: Resolver<Maybe<Unia>, ParentType, Context>;
+  interfejs?: Resolver<Maybe<Testowy>, ParentType, Context>;
+};
+
+export type TestowyResolvers<Context = any, ParentType = Testowy> = {
+  __resolveType: TypeResolveFn<"Product" | "Jakistam", ParentType, Context>;
+  name?: Resolver<Scalars["String"], ParentType, Context>;
+};
+
+export type UniaResolvers<Context = any, ParentType = Unia> = {
+  __resolveType: TypeResolveFn<
+    "Product" | "Jakistam" | "Cokolwiek",
+    ParentType,
+    Context
+  >;
 };
 
 export type IResolvers<Context = any> = {
+  Cokolwiek?: CokolwiekResolvers<Context>;
+  Jakistam?: JakistamResolvers<Context>;
   Mutation?: MutationResolvers<Context>;
   Product?: ProductResolvers<Context>;
   Query?: QueryResolvers<Context>;
+  Testowy?: TestowyResolvers;
+  Unia?: UniaResolvers;
 };

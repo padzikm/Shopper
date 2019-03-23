@@ -1,5 +1,203 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`aliases 1`] = `
+Object {
+  "products": Array [
+    Object {
+      "alias1": "jest opis",
+      "alias2": "nie ma opisu",
+    },
+    Object {
+      "alias1": "jest opis",
+      "alias2": "nie ma opisu",
+    },
+    Object {
+      "alias1": "jest opis",
+      "alias2": "nie ma opisu",
+    },
+  ],
+}
+`;
+
+exports[`fragments 1`] = `
+Object {
+  "productOne": Array [
+    Object {
+      "desc": "jest opis",
+      "name": "raz",
+    },
+    Object {
+      "desc": "jest opis",
+      "name": "dwaa",
+    },
+    Object {
+      "desc": "jest opis",
+      "name": "trzyy",
+    },
+  ],
+  "productTwo": Array [
+    Object {
+      "desc": "jest opis",
+      "name": "raz",
+    },
+    Object {
+      "desc": "jest opis",
+      "name": "dwaa",
+    },
+    Object {
+      "desc": "jest opis",
+      "name": "trzyy",
+    },
+  ],
+}
+`;
+
+exports[`fragments default variables 1`] = `
+Object {
+  "productOne": Array [
+    Object {
+      "desc": "jest opis",
+      "name": "raz",
+    },
+    Object {
+      "desc": "jest opis",
+      "name": "dwaa",
+    },
+    Object {
+      "desc": "jest opis",
+      "name": "trzyy",
+    },
+  ],
+  "productTwo": Array [
+    Object {
+      "desc": "jest opis",
+      "name": "raz",
+    },
+    Object {
+      "desc": "jest opis",
+      "name": "dwaa",
+    },
+    Object {
+      "desc": "jest opis",
+      "name": "trzyy",
+    },
+  ],
+}
+`;
+
+exports[`fragments mandatory variables 1`] = `undefined`;
+
+exports[`fragments variables 1`] = `
+Object {
+  "productOne": Array [
+    Object {
+      "desc": "jest opis",
+      "name": "raz",
+    },
+    Object {
+      "desc": "jest opis",
+      "name": "dwaa",
+    },
+    Object {
+      "desc": "jest opis",
+      "name": "trzyy",
+    },
+  ],
+  "productTwo": Array [
+    Object {
+      "desc": "jest opis",
+      "name": "raz",
+    },
+    Object {
+      "desc": "jest opis",
+      "name": "dwaa",
+    },
+    Object {
+      "desc": "jest opis",
+      "name": "trzyy",
+    },
+  ],
+}
+`;
+
+exports[`if directive 1`] = `
+Object {
+  "productTwo": Array [
+    Object {
+      "desc": "jest opis",
+      "name": "raz",
+    },
+    Object {
+      "desc": "jest opis",
+      "name": "dwaa",
+    },
+    Object {
+      "desc": "jest opis",
+      "name": "trzyy",
+    },
+  ],
+}
+`;
+
+exports[`interfejs 1`] = `
+Object {
+  "interfejs": Object {
+    "name": "bla jakistam",
+    "pole": 6,
+  },
+}
+`;
+
+exports[`mutation 1`] = `
+Object {
+  "crProduct": Object {
+    "desc": "nie ma opisu",
+    "name": "mutation CENT",
+  },
+}
+`;
+
+exports[`mutation fragments 1`] = `
+Object {
+  "productOne": Object {
+    "desc": "jest opis",
+    "name": "mutation CENT",
+  },
+  "productTwo": Object {
+    "desc": "jest opis",
+    "name": "mutation bla",
+  },
+}
+`;
+
+exports[`mutation input 1`] = `
+Object {
+  "createProduct": Object {
+    "desc": "nie ma opisu",
+    "name": "costam bla",
+  },
+}
+`;
+
+exports[`operation name 1`] = `
+Object {
+  "products": Array [
+    Object {
+      "alias1": "jest opis",
+      "alias2": "nie ma opisu",
+    },
+    Object {
+      "alias1": "jest opis",
+      "alias2": "nie ma opisu",
+    },
+    Object {
+      "alias1": "jest opis",
+      "alias2": "nie ma opisu",
+    },
+  ],
+}
+`;
+
 exports[`query products desc test 1`] = `
 Object {
   "products": Array [
@@ -43,13 +241,37 @@ Object {
         "name": "Product",
       },
       Object {
+        "name": "Testowy",
+      },
+      Object {
         "name": "String",
       },
       Object {
         "name": "LengthUnit",
       },
       Object {
+        "name": "Unia",
+      },
+      Object {
+        "name": "Jakistam",
+      },
+      Object {
+        "name": "Int",
+      },
+      Object {
+        "name": "Cokolwiek",
+      },
+      Object {
+        "name": "ID",
+      },
+      Object {
+        "name": "Float",
+      },
+      Object {
         "name": "Mutation",
+      },
+      Object {
+        "name": "ProductInput",
       },
       Object {
         "name": "__Schema",
@@ -78,7 +300,42 @@ Object {
       Object {
         "name": "__DirectiveLocation",
       },
+      Object {
+        "name": "CacheControlScope",
+      },
+      Object {
+        "name": "Upload",
+      },
     ],
+  },
+}
+`;
+
+exports[`skip directive 1`] = `
+Object {
+  "productTwo": Array [
+    Object {
+      "desc": "jest opis",
+      "name": "raz",
+    },
+    Object {
+      "desc": "jest opis",
+      "name": "dwaa",
+    },
+    Object {
+      "desc": "jest opis",
+      "name": "trzyy",
+    },
+  ],
+}
+`;
+
+exports[`unia 1`] = `
+Object {
+  "unia": Object {
+    "__typename": "Cokolwiek",
+    "x": 4,
+    "y": "afdafas;flk",
   },
 }
 `;
