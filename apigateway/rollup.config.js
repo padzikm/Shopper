@@ -21,5 +21,9 @@ export default {
                 }
             }
         })
-    ]
+    ],
+    watch:{
+        chokidar: true,
+        clearScreen: false
+    }
   };

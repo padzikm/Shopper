@@ -67,3 +67,11 @@ export type CokolwQuery = { __typename?: "Query" } & {
 };
 
 export type FragFragment = { __typename?: "Product" } & Pick<Product, "name">;
+
+export type TestmutMutationVariables = {
+  prod: ProductInput;
+};
+
+export type TestmutMutation = { __typename?: "Mutation" } & {
+  createProduct: { __typename?: "Product" } & Pick<Product, "name" | "desc">;
+};

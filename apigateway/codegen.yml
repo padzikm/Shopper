@@ -1,4 +1,4 @@
-schema: src/**/schema.graphql
+schema: src/**/*.graphql
 overwrite: true
 generates:
   ./typings/types.server.d.ts:

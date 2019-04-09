@@ -1,0 +1,6 @@
+mutation testmut($prod: ProductInput!) {
+    createProduct(product: $prod){
+        name
+        desc
+    }
+}

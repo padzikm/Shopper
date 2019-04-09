@@ -7,7 +7,7 @@
   "license": "BSD-3-Clause",
   "repository": "Polymer/pwa-starter-kit",
   "scripts": {
-    "dev": "run-p -l \"code-gen --watch\" \"rollup --watch\" serve:local",
+    "dev": "run-p -l \"code-gen --watch\" \"rollup -w\" serve:local",
     "start": "gulp serve",
     "rollup": "rollup -c",
     "code-gen": "gql-gen",
@@ -45,6 +45,7 @@
     "@types/graphql": "^14.0.5",
     "axe-core": "^3.0.0",
     "chai": "^4.1.2",
+    "chokidar": "^2.1.5",
     "del": "^3.0.0",
     "gulp": "^4.0.0",
     "gulp-rename": "^1.3.0",

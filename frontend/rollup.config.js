@@ -40,7 +40,11 @@ export default {
       //   // Needed to roll up apollo-cache-persist
       //   'apollo-cache-persist': ['persistCache']
       // }
-    //}),
+    //}), 
     typescript(),
-  ]
+  ],
+  watch:{
+    chokidar: true,
+    clearScreen: false
+  }
 }
